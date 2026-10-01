@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Our Little Love Story ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff5f7;
+    color: #5c3039;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ================================
+   FLOATING HEARTS
+================================ */
+
+#hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.heart {
+    position: absolute;
+    bottom: -60px;
+    animation: floatHeart linear forwards;
+    opacity: 0;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .75;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100svh;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255,190,205,.8),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(255,175,195,.8),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #fff4f6,
+            #ffdce4
+        );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+
+    position: relative;
+    z-index: 2;
+
+    animation: fadeUp 1s ease;
+}
+
+.mini-title {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+    color: #b65368;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(55px, 15vw, 100px);
+
+    line-height: .9;
+
+    color: #b83e58;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e65370;
+}
+
+.hero-heart {
+    font-size: 48px;
+    margin-top: 25px;
+
+    animation: pulse 1.5s infinite;
+
+    filter:
+        drop-shadow(
+            0 8px 12px
+            rgba(190,40,70,.2)
+        );
+}
+
+.hero-text {
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    color: #75424c;
+}
+
+.scroll-btn {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 27px;
+
+    border-radius: 999px;
+
+    background: #d94f6b;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(217,79,107,.25);
+
+    transition: .3s;
+}
+
+.scroll-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ================================
+   SECTIONS
+================================ */
+
+.section {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 80px 18px;
+
+    text-align: center;
+}
+
+.section-label {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #d45870;
+
+    font-weight: 600;
+}
+
+.section h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    color: #a83c54;
+
+    margin:
+        10px 0
+        12px;
+}
+
+.section-subtitle {
+    color: #89616a;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   COUNTER
+================================ */
+
+.counter {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    max-width: 360px;
+
+    margin: auto;
+}
+
+.counter-box {
+    background: white;
+
+    padding: 20px 10px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(120,40,60,.08);
+}
+
+.counter-box:last-child {
+    grid-column: 1 / -1;
+
+    width: calc(50% - 6px);
+
+    justify-self: center;
+}
+
+.counter-box span {
+    display: block;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    color: #d94f6b;
+}
+
+.counter-box small {
+    color: #9b6b73;
+
+    font-size: 11px;
+}
+
+
+/* ================================
+   MEMORIES
+================================ */
+
+.photos-section {
+    max-width: 1200px;
+}
+
+.scrapbook {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 55px;
+
+    margin-top: 45px;
+}
+
+.polaroid {
+    width: min(86vw, 320px);
+
+    background: white;
+
+    padding:
+        12px 12px
+        25px;
+
+    box-shadow:
+        0 15px 30px
+        rgba(100,30,50,.15);
+
+    position: relative;
+
+    transition: .4s;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 310px;
+
+    object-fit: cover;
+
+    background: #ffdce4;
+}
+
+.polaroid p {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 23px;
+
+    color: #8f4052;
+
+    margin-top: 15px;
+}
+
+.photo-one {
+    transform: rotate(-3deg);
+}
+
+.photo-two {
+    transform: rotate(2deg);
+
+    z-index: 2;
+}
+
+.photo-three {
+    transform: rotate(3deg);
+}
+
+.polaroid:hover {
+    transform:
+        translateY(-10px)
+        scale(1.03);
+
+    z-index: 10;
+}
+
+.polaroid::before {
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+    height: 24px;
+
+    top: -12px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-3deg);
+
+    background:
+        rgba(255,220,150,.7);
+
+    z-index: 5;
+}
+
+
+/* ================================
+   TIMELINE
+================================ */
+
+.timeline {
+    max-width: 750px;
+
+    margin:
+        40px auto
+        0;
+
+    text-align: left;
+}
+
+.timeline-item {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    align-items: flex-start;
+}
+
+.timeline-dot {
+    flex: 0 0 43px;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    background: #ffdce3;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+}
+
+.timeline-content {
+    flex: 1;
+
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(100,30,50,.07);
+}
+
+.timeline-content span {
+    font-size: 10px;
+
+    color: #d4566d;
+}
+
+.timeline-content h3 {
+    font-size: 16px;
+
+    color: #a83c54;
+
+    margin:
+        5px 0
+        10px;
+}
+
+.timeline-content p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #6e5057;
+}
+
+
+/* ================================
+   LOVE LETTER
+================================ */
+
+.letter-section {
+    padding: 75px 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe0e7,
+            #fff5f7
+        );
+
+    text-align: center;
+}
+
+.letter-card {
+    width: 100%;
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px 20px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(120,40,60,.12);
+}
+
+.envelope {
+    font-size: 55px;
+
+    animation:
+        pulse 1.5s infinite;
+}
+
+.letter-card h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 39px;
+
+    line-height: 1.1;
+
+    color: #a83c54;
+
+    margin:
+        10px 0
+        25px;
+}
+
+.main-btn {
+    border: none;
+
+    background: #d94f6b;
+
+    color: white;
+
+    padding:
+        14px 27px;
+
+    border-radius: 50px;
+
+    font-family: "Poppins", sans-serif;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.letter {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #fff5f7;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    font-size: 13px;
+
+    color: #65454c;
+}
+
+.letter.show {
+    display: block;
+
+    animation:
+        fadeUp .6s ease;
+}
+
+#typewriter {
+    white-space: pre-line;
+}
+
+
+/* ================================
+   NEXT MONTHSARY
+================================ */
+
+.countdown-section {
+    max-width: none;
+
+    background: white;
+}
+
+.next-counter {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    max-width: 350px;
+
+    margin: 30px auto 0;
+}
+
+.next-counter div {
+    padding: 18px 10px;
+
+    background: #fff1f4;
+
+    border-radius: 18px;
+}
+
+.next-counter span {
+    display: block;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    color: #d94f6b;
+}
+
+.next-counter small {
+    font-size: 11px;
+
+    color: #8e656d;
+}
+
+
+/* ================================
+   FINAL
+================================ */
+
+.final-section {
+    min-height: 60vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d94f6b,
+            #a9324d
+        );
+
+    color: white;
+}
+
+.big-heart {
+    font-size: 65px;
+
+    animation:
+        pulse 1.3s infinite;
+}
+
+.final-section h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 55px;
+
+    margin: 15px 0;
+}
+
+.final-section p {
+    font-size: 14px;
+}
+
+.forever {
+    margin-top: 22px;
+
+    font-family: "Dancing Script", cursive;
+
+    font-size: 25px !important;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+
+    padding: 24px 15px;
+
+    background: #922d45;
+
+    color: #ffdce3;
+
+    font-size: 11px;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+/* ================================
+   DESKTOP
+================================ */
+
+@media (min-width: 700px) {
+
+    .section {
+        padding:
+            100px 25px;
+    }
+
+    .section h2 {
+        font-size: 50px;
+    }
+
+    .counter {
+        display: flex;
+
+        justify-content: center;
+
+        max-width: none;
+    }
+
+    .counter-box {
+        width: 130px;
+    }
+
+    .counter-box:last-child {
+        width: 130px;
+    }
+
+    .scrapbook {
+        flex-direction: row;
+
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+    .polaroid {
+        width: 280px;
+    }
+
+    .polaroid img {
+        height: 300px;
+    }
+
+    .photo-one {
+        transform: rotate(-6deg);
+    }
+
+    .photo-two {
+        transform: rotate(3deg);
+    }
+
+    .photo-three {
+        transform: rotate(6deg);
+    }
+
+    .next-counter {
+        display: flex;
+
+        max-width: none;
+    }
+
+    .next-counter div {
+        min-width: 120px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- FLOATING HEARTS -->
+<div id="hearts"></div>
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="mini-title">
+            A little website made just for you ❤️
+        </p>
+
+        <h1>
+            Happy Monthsary,
+            <span>My Love</span>
+        </h1>
+
+        <div class="hero-heart">
+            ❤️
+        </div>
+
+        <p class="hero-text">
+            From July 5, 2026 until forever... 🥺
+        </p>
+
+        <a
+            href="#story"
+            class="scroll-btn"
+        >
+            Our Story ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     RELATIONSHIP
+================================ -->
+
+<section
+    id="story"
+    class="section"
+>
+
+    <p class="section-label">
+        OUR JOURNEY
+    </p>
+
+    <h2>
+        Look How Far We've Come ❤️
+    </h2>
+
+    <p class="section-subtitle">
+        Every second with you is a memory worth keeping.
+    </p>
+
+
+    <div class="counter">
+
+        <div class="counter-box">
+            <span id="months">0</span>
+            <small>Months</small>
+        </div>
+
+        <div class="counter-box">
+            <span id="days">0</span>
+            <small>Days</small>
+        </div>
+
+        <div class="counter-box">
+            <span id="hours">0</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="counter-box">
+            <span id="minutes">0</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="counter-box">
+            <span id="seconds">0</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     MEMORIES
+================================ -->
+
+<section class="section photos-section">
+
+    <p class="section-label">
+        OUR MEMORIES
+    </p>
+
+    <h2>
+        Our Little Moments 📸
+    </h2>
+
+    <p class="section-subtitle">
+        Three pictures, a thousand memories. ❤️
+    </p>
+
+
+    <div class="scrapbook">
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="polaroid photo-one">
+
+            <!-- PALITAN NATIN ITO MAMAYA -->
+
+            <img
+    src="photo1.jpg"
+    alt="Our first memory"
+>
+
+            <p>
+                Our beginning ❤️
+            </p>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="polaroid photo-two">
+
+            <img
+    src="photo2.jpg"
+    alt="Our favorite memory"
+>
+
+            <p>
+                One of my favorite moments 💕
+            </p>
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="polaroid photo-three">
+
+           <img
+    src="photo3.jpg"
+    alt="Our memory"
+>
+
+            <p>
+                Just you and me 🥺
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     TIMELINE
+================================ -->
+
+<section class="section">
+
+    <p class="section-label">
+        OUR LOVE STORY
+    </p>
+
+    <h2>
+        From Then Until Now 💗
+    </h2>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">
+                ❤️
+            </div>
+
+            <div class="timeline-content">
+
+                <span>
+                    July 5, 2026
+                </span>
+
+                <h3>
+                    The Beginning
+                </h3>
+
+                <p>
+                    The day our story officially started.
+                    One date that became one of the most
+                    important dates in my life.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">
+                💕
+            </div>
+
+            <div class="timeline-content">
+
+                <span>
+                    Our First Memories
+                </span>
+
+                <h3>
+                    Getting To Know Each Other
+                </h3>
+
+                <p>
+                    From random conversations to laughing
+                    about the smallest things, slowly you
+                    became someone very special to me.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">
+                💖
+            </div>
+
+            <div class="timeline-content">
+
+                <span>
+                    Today
+                </span>
+
+                <h3>
+                    Still Choosing You
+                </h3>
+
+                <p>
+                    And here we are. Another month together,
+                    with more memories waiting for us.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     LOVE LETTER
+================================ -->
+
+<section class="letter-section">
+
+    <div class="letter-card">
+
+        <div class="envelope">
+            💌
+        </div>
+
+        <p class="section-label">
+            A LETTER FOR YOU
+        </p>
+
+        <h2>
+            I Have Something To Tell You...
+        </h2>
+
+
+        <button
+            id="openLetter"
+            class="main-btn"
+        >
+            Open My Letter 💗
+        </button>
+
+
+        <div
+            id="letter"
+            class="letter"
+        >
+
+            <p id="typewriter"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     NEXT MONTHSARY
+================================ -->
+
+<section class="section countdown-section">
+
+    <p class="section-label">
+        OUR NEXT MONTHSARY
+    </p>
+
+    <h2>
+        Until Our Next Month Together 💕
+    </h2>
+
+    <p class="section-subtitle">
+        Counting the moments until another little celebration of us.
+    </p>
+
+
+    <div class="next-counter">
+
+        <div>
+            <span id="nextDays">0</span>
+            <small>Days</small>
+        </div>
+
+        <div>
+            <span id="nextHours">0</span>
+            <small>Hours</small>
+        </div>
+
+        <div>
+            <span id="nextMinutes">0</span>
+            <small>Minutes</small>
+        </div>
+
+        <div>
+            <span id="nextSeconds">0</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FINAL
+================================ -->
+
+<section class="final-section">
+
+    <div class="big-heart">
+        ❤️
+    </div>
+
+    <h2>
+        I Love You.
+    </h2>
+
+    <p>
+        Today, tomorrow, and all the days after. ❤️
+    </p>
+
+    <p class="forever">
+        Here's to us. 🥂💕
+    </p>
+
+</section>
+
+
+<footer>
+    Made with love, just for you ❤️
+</footer>
+
+
+<script>
+
+/* =================================
+   ANNIVERSARY DATE
+================================= */
+
+const anniversaryDate = new Date(
+    2026,
+    6,
+    5,
+    0,
+    0,
+    0
+);
+
+
+/* =================================
+   RELATIONSHIP COUNTER
+================================= */
+
+function getCompletedMonths(now) {
+
+    let months =
+        (now.getFullYear() -
+            anniversaryDate.getFullYear()) * 12
+        +
+        (now.getMonth() -
+            anniversaryDate.getMonth());
+
+
+    const thisMonth =
+        new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            anniversaryDate.getDate()
+        );
+
+
+    if (now < thisMonth) {
+        months--;
+    }
+
+
+    return Math.max(
+        months,
+        0
+    );
+}
+
+
+function updateRelationshipCounter() {
+
+    const now = new Date();
+
+    const months =
+        getCompletedMonths(now);
+
+
+    const completedDate =
+        new Date(
+            anniversaryDate
+        );
+
+
+    completedDate.setMonth(
+        completedDate.getMonth() +
+        months
+    );
+
+
+    let remaining =
+        now - completedDate;
+
+
+    if (remaining < 0) {
+        remaining = 0;
+    }
+
+
+    const second = 1000;
+
+    const minute =
+        second * 60;
+
+    const hour =
+        minute * 60;
+
+    const day =
+        hour * 24;
+
+
+    const days =
+        Math.floor(
+            remaining / day
+        );
+
+
+    remaining %= day;
+
+
+    const hours =
+        Math.floor(
+            remaining / hour
+        );
+
+
+    remaining %= hour;
+
+
+    const minutes =
+        Math.floor(
+            remaining / minute
+        );
+
+
+    remaining %= minute;
+
+
+    const seconds =
+        Math.floor(
+            remaining / second
+        );
+
+
+    document.getElementById(
+        "months"
+    ).textContent = months;
+
+
+    document.getElementById(
+        "days"
+    ).textContent = days;
+
+
+    document.getElementById(
+        "hours"
+    ).textContent = hours;
+
+
+    document.getElementById(
+        "minutes"
+    ).textContent = minutes;
+
+
+    document.getElementById(
+        "seconds"
+    ).textContent = seconds;
+}
+
+
+updateRelationshipCounter();
+
+setInterval(
+    updateRelationshipCounter,
+    1000
+);
+
+
+/* =================================
+   NEXT MONTHSARY
+================================= */
+
+function getNextMonthsary() {
+
+    const now = new Date();
+
+    let next =
+        new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            anniversaryDate.getDate()
+        );
+
+
+    if (next <= now) {
+
+        next =
+            new Date(
+                now.getFullYear(),
+                now.getMonth() + 1,
+                anniversaryDate.getDate()
+            );
+    }
+
+
+    return next;
+}
+
+
+function updateNextMonthsary() {
+
+    const now = new Date();
+
+    const next =
+        getNextMonthsary();
+
+
+    let difference =
+        next - now;
+
+
+    const second = 1000;
+
+    const minute =
+        second * 60;
+
+    const hour =
+        minute * 60;
+
+    const day =
+        hour * 24;
+
+
+    const days =
+        Math.floor(
+            difference / day
+        );
+
+
+    difference %= day;
+
+
+    const hours =
+        Math.floor(
+            difference / hour
+        );
+
+
+    difference %= hour;
+
+
+    const minutes =
+        Math.floor(
+            difference / minute
+        );
+
+
+    difference %= minute;
+
+
+    const seconds =
+        Math.floor(
+            difference / second
+        );
+
+
+    document.getElementById(
+        "nextDays"
+    ).textContent = days;
+
+
+    document.getElementById(
+        "nextHours"
+    ).textContent = hours;
+
+
+    document.getElementById(
+        "nextMinutes"
+    ).textContent = minutes;
+
+
+    document.getElementById(
+        "nextSeconds"
+    ).textContent = seconds;
+}
+
+
+updateNextMonthsary();
+
+setInterval(
+    updateNextMonthsary,
+    1000
+);
+
+
+/* =================================
+   LOVE LETTER
+================================= */
+
+const loveLetter = `
+HAPPY MONTHSARY,MAHAL KO! ❤️
+
+Another little month with you,
+and I just want you to know how thankful
+I am that I get to have you in my life.
+
+Thank you for staying,
+for understanding me,
+for making me smile,
+and for being someone
+I can call my favorite person.
+
+Hindi man perfect ang relationship natin,
+I promise na lagi kong susubukang maging better
+para sa atin.
+
+I don't know exactly what the future
+will look like,
+pero isang bagay ang sigurado ako...
+
+I want you to be part of it. ❤️
+
+More memories.
+More laughs.
+More random conversations.
+More moments na tayong dalawa lang.
+
+I love you so much, MAHAL. 🥺💗
+
+Happy monthsary! ❤️
+`;
+
+
+const openLetter =
+    document.getElementById(
+        "openLetter"
+    );
+
+
+const letter =
+    document.getElementById(
+        "letter"
+    );
+
+
+const typewriter =
+    document.getElementById(
+        "typewriter"
+    );
+
+
+let letterOpened = false;
+
+let typingTimer;
+
+
+openLetter.addEventListener(
+    "click",
+    function() {
+
+        if (letterOpened) {
+
+            letter.classList.remove(
+                "show"
+            );
+
+            openLetter.textContent =
+                "Open My Letter 💗";
+
+            letterOpened = false;
+
+            clearTimeout(
+                typingTimer
+            );
+
+            return;
+        }
+
+
+        letter.classList.add(
+            "show"
+        );
+
+        openLetter.textContent =
+            "Hide My Letter 💕";
+
+        letterOpened = true;
+
+
+        typewriter.textContent = "";
+
+        let i = 0;
+
+
+        function type() {
+
+            if (
+                i <
+                loveLetter.length
+            ) {
+
+                typewriter.textContent +=
+                    loveLetter.charAt(i);
+
+                i++;
+
+
+                typingTimer =
+                    setTimeout(
+                        type,
+                        25
+                    );
+            }
+        }
+
+
+        type();
+    }
+);
+
+
+/* =================================
+   FLOATING HEARTS
+================================= */
+
+const hearts =
+    document.getElementById(
+        "hearts"
+    );
+
+
+const heartTypes = [
+    "❤️",
+    "💕",
+    "💗",
+    "💖",
+    "💘",
+    "💓",
+    "💞"
+];
+
+
+function createHeart() {
+
+    const heart =
+        document.createElement(
+            "span"
+        );
+
+
+    heart.className =
+        "heart";
+
+
+    heart.textContent =
+        heartTypes[
+            Math.floor(
+                Math.random() *
+                heartTypes.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+    heart.style.fontSize =
+        Math.random() * 14 +
+        13 +
+        "px";
+
+
+    const duration =
+        Math.random() * 5 + 5;
+
+
+    heart.style.animationDuration =
+        duration +
+        "s";
+
+
+    hearts.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        function() {
+
+            heart.remove();
+
+        },
+        (duration + 1) * 1000
+    );
+}
+
+
+setInterval(
+    createHeart,
+    650
+);
+
+
+for (
+    let i = 0;
+    i < 5;
+    i++
+) {
+
+    setTimeout(
+        createHeart,
+        i * 300
+    );
+}
+
+</script>
+
+</body>
+</html>
